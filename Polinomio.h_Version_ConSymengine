@@ -38,5 +38,5 @@ private:
     float b;
     float c;
     float d;
-};
+}; //Hecho por Benjamín Horta, 5/11
 #endif
