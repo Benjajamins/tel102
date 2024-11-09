@@ -21,6 +21,21 @@ vector<string> split(string str, char pattern) {
   return results;
 }//José Flores, hecho miércoles 6/11
 
+double evaluar(vector <double> factores, double x){
+  vector <double> evaluado(factores.size());
+  double suma=0;
+  for(int i(0); i<factores.size();i++){
+    if(i==0){evaluado.push_back(factores[i](pow(x, 3)));}//multiplicar factores por las x's
+    if(i==1){evaluado.push_back(factores[i](pow(x, 2)));}
+    if(i==2){evaluado.push_back(factores[i](pow(x, 1)));}
+    if(i==3){evaluado.push_back(factores[i](pow(x, 0)));}
+  }
+  for(int i(0); i<evaluado.size(); i++){//
+    suma+=evaluado[i];
+  }
+  return suma;
+}//José Flores, hecho miércoles 6/11
+
 int main(){
   string alo;
   cin>>alo;
