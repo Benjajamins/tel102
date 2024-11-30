@@ -6,11 +6,13 @@ using namespace std;
 Polinomio::Polinomio() : x(symbol("x")) {}
 
 // Leer polinomio desde la entrada del usuario
-void Polinomio::leerPolinomio() {
-    string user_input;
-    cout << "Ingrese un polinomio en función de x (ejemplo: 3*x**3 - 4*x**2 + x): ";
-    getline(cin, user_input);
-    poly = Expression(parse(user_input));
+void Polinomio::leerPolinomio(const string& user_input) {
+    try {
+        // Inicializar directamente poly usando el argumento recibido
+        poly = Expression(parse(user_input)); 
+    } catch (const std::exception& e) {
+        cerr << "Error al procesar el polinomio ingresado: " << e.what() << endl;
+    }
 }
 
 // Calcular la primera derivada
