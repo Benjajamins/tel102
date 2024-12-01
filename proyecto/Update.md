@@ -16,7 +16,7 @@ Si es correcto, se abre la ventana del gráfico.
 
             
 Falta destacar que falta implementar completamente el botón del registro, como también volver un poco más amena la interfaz.
-
+-Falta también implementar el rango para modelar la función.
 
 Imagen de la interfaz:
 
