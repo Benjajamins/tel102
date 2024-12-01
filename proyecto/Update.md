@@ -1,12 +1,23 @@
 Update 30/11/2024- José Flores
+
 Hice el Menú principal, teniendo los widgets funcionales de:
+
 -Botón de máximo o mínimo: Si es máximo, el atributo maxmin se vuelve True, si es mínimo, False.
+
 -Botón de Salir: Cierra ventana.
+
 -QLineEdit: Casilla para que el usuario escriba su función.
+
 -Botón de calcular: Botón que abre la ventana con el gráfico de máximos o mínimos.
-            *Si el input es incorrecto(vacío o con carácteres no válidos) se abre un QmessageBox con la "retroalimentación" y cierra la ventana.
-            *Si es correcto, se abre la ventana del gráfico.
+
+Si el input es incorrecto(vacío o con carácteres no válidos) se abre un QmessageBox con la "retroalimentación" y cierra la ventana.
+
+Si es correcto, se abre la ventana del gráfico.
+
+            
 Falta destacar que falta implementar completamente el botón del registro, como también volver un poco más amena la interfaz.
+
+
 Imagen de la interfaz:
 
 
