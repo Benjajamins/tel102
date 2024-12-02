@@ -11,10 +11,12 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QDoubleSpinBox>
+#include <QtWidgets/QGraphicsView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -23,7 +25,20 @@ class Ui_inputwindow
 {
 public:
     QWidget *centralwidget;
-    QTextEdit *textEdit;
+    QGraphicsView *graphicsView;
+    QLabel *label;
+    QDoubleSpinBox *xmin;
+    QDoubleSpinBox *xmax;
+    QLabel *label_2;
+    QLabel *label_3;
+    QLabel *labelFuncion;
+    QLabel *label_4;
+    QLabel *label_5;
+    QLabel *label_6;
+    QDoubleSpinBox *xmin_2;
+    QDoubleSpinBox *xmax_2;
+    QLabel *label_7;
+    QLabel *label_8;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -31,16 +46,72 @@ public:
     {
         if (inputwindow->objectName().isEmpty())
             inputwindow->setObjectName("inputwindow");
-        inputwindow->resize(687, 187);
+        inputwindow->resize(1366, 768);
         centralwidget = new QWidget(inputwindow);
         centralwidget->setObjectName("centralwidget");
-        textEdit = new QTextEdit(centralwidget);
-        textEdit->setObjectName("textEdit");
-        textEdit->setGeometry(QRect(170, 40, 321, 71));
+        graphicsView = new QGraphicsView(centralwidget);
+        graphicsView->setObjectName("graphicsView");
+        graphicsView->setGeometry(QRect(40, 30, 851, 651));
+        label = new QLabel(centralwidget);
+        label->setObjectName("label");
+        label->setGeometry(QRect(1080, 30, 121, 16));
+        xmin = new QDoubleSpinBox(centralwidget);
+        xmin->setObjectName("xmin");
+        xmin->setGeometry(QRect(1040, 90, 62, 22));
+        xmin->setMinimum(-9999.000000000000000);
+        xmin->setMaximum(9999.000000000000000);
+        xmin->setSingleStep(10.000000000000000);
+        xmin->setValue(-100.000000000000000);
+        xmax = new QDoubleSpinBox(centralwidget);
+        xmax->setObjectName("xmax");
+        xmax->setGeometry(QRect(1220, 90, 62, 22));
+        xmax->setMinimum(-9999.000000000000000);
+        xmax->setMaximum(9999.000000000000000);
+        xmax->setSingleStep(10.000000000000000);
+        xmax->setValue(100.000000000000000);
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName("label_2");
+        label_2->setGeometry(QRect(1000, 90, 21, 16));
+        label_3 = new QLabel(centralwidget);
+        label_3->setObjectName("label_3");
+        label_3->setGeometry(QRect(1140, 90, 41, 16));
+        labelFuncion = new QLabel(centralwidget);
+        labelFuncion->setObjectName("labelFuncion");
+        labelFuncion->setGeometry(QRect(940, 240, 241, 71));
+        labelFuncion->setTextFormat(Qt::TextFormat::AutoText);
+        label_4 = new QLabel(centralwidget);
+        label_4->setObjectName("label_4");
+        label_4->setGeometry(QRect(950, 90, 21, 16));
+        label_5 = new QLabel(centralwidget);
+        label_5->setObjectName("label_5");
+        label_5->setGeometry(QRect(950, 160, 21, 16));
+        label_6 = new QLabel(centralwidget);
+        label_6->setObjectName("label_6");
+        label_6->setGeometry(QRect(1000, 160, 21, 16));
+        xmin_2 = new QDoubleSpinBox(centralwidget);
+        xmin_2->setObjectName("xmin_2");
+        xmin_2->setGeometry(QRect(1040, 160, 62, 22));
+        xmin_2->setMinimum(-9999.000000000000000);
+        xmin_2->setMaximum(9999.000000000000000);
+        xmin_2->setSingleStep(10.000000000000000);
+        xmin_2->setValue(-100.000000000000000);
+        xmax_2 = new QDoubleSpinBox(centralwidget);
+        xmax_2->setObjectName("xmax_2");
+        xmax_2->setGeometry(QRect(1220, 160, 62, 22));
+        xmax_2->setMinimum(-9999.000000000000000);
+        xmax_2->setMaximum(9999.000000000000000);
+        xmax_2->setSingleStep(10.000000000000000);
+        xmax_2->setValue(100.000000000000000);
+        label_7 = new QLabel(centralwidget);
+        label_7->setObjectName("label_7");
+        label_7->setGeometry(QRect(1140, 160, 41, 16));
+        label_8 = new QLabel(centralwidget);
+        label_8->setObjectName("label_8");
+        label_8->setGeometry(QRect(1090, 340, 91, 16));
         inputwindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(inputwindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 687, 22));
+        menubar->setGeometry(QRect(0, 0, 1366, 22));
         inputwindow->setMenuBar(menubar);
         statusbar = new QStatusBar(inputwindow);
         statusbar->setObjectName("statusbar");
@@ -54,14 +125,17 @@ public:
     void retranslateUi(QMainWindow *inputwindow)
     {
         inputwindow->setWindowTitle(QCoreApplication::translate("inputwindow", "MainWindow", nullptr));
-        textEdit->setHtml(QCoreApplication::translate("inputwindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
+        label->setText(QCoreApplication::translate("inputwindow", "Opciones de gr\303\241fica", nullptr));
+        xmin->setPrefix(QString());
+        label_2->setText(QCoreApplication::translate("inputwindow", "De", nullptr));
+        label_3->setText(QCoreApplication::translate("inputwindow", "Hasta", nullptr));
+        labelFuncion->setText(QCoreApplication::translate("inputwindow", "Funci\303\263n modelada:", nullptr));
+        label_4->setText(QCoreApplication::translate("inputwindow", "X:", nullptr));
+        label_5->setText(QCoreApplication::translate("inputwindow", "Y:", nullptr));
+        label_6->setText(QCoreApplication::translate("inputwindow", "De", nullptr));
+        xmin_2->setPrefix(QString());
+        label_7->setText(QCoreApplication::translate("inputwindow", "Hasta", nullptr));
+        label_8->setText(QCoreApplication::translate("inputwindow", "Puntos cr\303\255ticos", nullptr));
     } // retranslateUi
 
 };

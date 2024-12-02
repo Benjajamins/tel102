@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui charts
 
 # Directorios de encabezados (include)
 INCLUDEPATH += C:/symengine-install/include

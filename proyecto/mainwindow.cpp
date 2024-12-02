@@ -3,10 +3,10 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    , ui(new Ui::MainWindow), maxmin(true)
 {
-    setWindowTitle("Opti Fine");//título
     ui->setupUi(this);
+    setWindowTitle("Opti Fine");//título
 }
 
 MainWindow::~MainWindow()
@@ -16,7 +16,7 @@ MainWindow::~MainWindow()
 
 bool esValido(const QString& input) {
     // Expresión regular para permitir solo números y 'x'
-    QRegularExpression regex("^[0-9x^]+$");
+    QRegularExpression regex("^[0-9x^+-]+$");
 
     // Comprobar si el string coincide con la expresión regular
     QRegularExpressionMatch match = regex.match(input);
@@ -60,8 +60,10 @@ void MainWindow::on_calcular_clicked()
 {
     if (textNow.empty()) {
         showErrorMessage("El campo de texto está vacío. Por favor, ingrese un valor.");
+        return;
     } if(!(esValido(QString::fromStdString(textNow)))){
         showErrorMessage("Ingrese sólo números y x's");
+        return;
     }
     inputwindow *ventana = new inputwindow(textNow, maxmin, this);
     ventana->show();
