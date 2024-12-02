@@ -31,3 +31,27 @@ Imagen de la interfaz:
 Ventana secundaria:
 -Lo que hice fue que pudiera heredar, a través de su constructor, el texto que había en la mainwindow y si maxmin era true o false.
 Falta implementar todo el gráfico y menú.
+
+
+
+Update 02/12/2024
+
+Desarrollé la ventana de gráficos:
+
+-El gráfico se genera inicialmente con el método iniciarGrafico()
+
+-El gráfico funciona de forma dinámica con los botones que determinan el rango del X o Y.
+
+-Se intentó seguir implementando los puntos, pero hubieron muchos errores.
+
+-Se cambiaron distintos elementos de la clase polinomio como métodos y atributos para facilitar el cálculo y desarrollo de la ventana del gráfico.
+
+Falta desarrollar los puntos y el sistema de registro, que no se ve complicado.
+
+Imagen de la interfaz:
+
+![image](https://github.com/user-attachments/assets/c35e86b7-70a1-4ea3-9f17-8728850b9e44)
+
+
+(También, abajo a la derecha se puede ver la fecha como prueba)
+
