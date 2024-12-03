@@ -38,4 +38,4 @@ protected:
     bool maxmin;
     std::string textNow;
 };
-#endif // MAINWINDOW_H
+#endif
