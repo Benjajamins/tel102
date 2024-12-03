@@ -5,7 +5,6 @@ int main() {
     Polinomio polinomio;
 
     try {
-        // Ejecutar las funciones del flujo principal
         polinomio.leerPolinomio();
         polinomio.calcularDerivada();
         polinomio.encontrarPuntosCriticos();
