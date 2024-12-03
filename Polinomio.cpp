@@ -5,22 +5,18 @@ using namespace std;
 // Constructor
 Polinomio::Polinomio() : x(symbol("x")) {}
 
-// Leer polinomio desde la entrada del usuario
 void Polinomio::leerPolinomio(const string& user_input) {
     try {
-        // Inicializar directamente poly usando el argumento recibido
         poly = Expression(parse(user_input)); 
     } catch (const std::exception& e) {
         cerr << "Error al procesar el polinomio ingresado: " << e.what() << endl;
     }
 }
 
-// Calcular la primera derivada
 void Polinomio::calcularDerivada() {
     first_derivative = diff(poly, x);
 }
 
-// Encontrar puntos críticos resolviendo f'(x) = 0
 void Polinomio::encontrarPuntosCriticos() {
     RCP<const Set> solutions = solve(first_derivative.get_basic(), x);
 
@@ -32,7 +28,6 @@ void Polinomio::encontrarPuntosCriticos() {
     }
 }
 
-// Clasificar puntos críticos
 void Polinomio::clasificarPuntosCriticos() {
     if (critical_points.empty()) {
         cout << "No se encontraron puntos críticos." << endl;
@@ -41,9 +36,8 @@ void Polinomio::clasificarPuntosCriticos() {
 
     cout << "\nPuntos críticos y su clasificación:" << endl;
     for (const auto &point : critical_points) {
-        // Evaluar la derivada a la izquierda y derecha del punto crítico
-        auto left_value = first_derivative.subs({{x, point - 1e-3}});  // Ligeramente a la izquierda
-        auto right_value = first_derivative.subs({{x, point + 1e-3}}); // Ligeramente a la derecha
+        auto left_value = first_derivative.subs({{x, point - 1e-3}});  
+        auto right_value = first_derivative.subs({{x, point + 1e-3}}); 
 
         cout << "x = " << point << " -> ";
         if (str(left_value).find('-') == string::npos && str(right_value).find('-') != string::npos) {
@@ -56,7 +50,6 @@ void Polinomio::clasificarPuntosCriticos() {
     }
 }
 
-// Mostrar el polinomio y su derivada
 void Polinomio::mostrarResultados() const {
     cout << "\nPolinomio ingresado: " << poly << endl;
     cout << "Primera derivada: " << first_derivative << endl;
