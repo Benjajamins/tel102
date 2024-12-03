@@ -11,19 +11,19 @@
 
 class Polinomio {
 private:
-    SymEngine::RCP<const SymEngine::Symbol> x;             // Variable simbólica
-    SymEngine::Expression poly;                            // Polinomio
-    SymEngine::Expression first_derivative;                // Primera derivada
-    std::vector<SymEngine::Expression> critical_points;    // Puntos críticos
+    SymEngine::RCP<const SymEngine::Symbol> x;             
+    SymEngine::Expression poly;                            
+    SymEngine::Expression first_derivative;                
+    std::vector<SymEngine::Expression> critical_points;    
 
 public:
-    Polinomio();  // Constructor
+    Polinomio();  
 
-    void leerPolinomio();              // Leer polinomio desde el usuario
-    void calcularDerivada();           // Calcular la derivada del polinomio
-    void encontrarPuntosCriticos();    // Encontrar puntos críticos
-    void clasificarPuntosCriticos();   // Clasificar los puntos críticos
-    void mostrarResultados() const;   // Mostrar el polinomio y la derivada
+    void leerPolinomio();              
+    void calcularDerivada();           
+    void encontrarPuntosCriticos();    
+    void clasificarPuntosCriticos();   
+    void mostrarResultados() const;  
 };
 
 #endif // POLINOMIO_H
