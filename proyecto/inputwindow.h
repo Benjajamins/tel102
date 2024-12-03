@@ -44,4 +44,4 @@ private:
     double ymax;
 };
 
-#endif // INPUTWINDOW_H
+#endif
