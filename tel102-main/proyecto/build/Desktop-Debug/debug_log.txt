@@ -1,0 +1,286 @@
+Punto crítico encontrado: 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: 0
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Punto crítico encontrado: -2
+Máximo encontrado: x = -2
+Punto crítico encontrado: 0
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Minimo encontrado: x = 0
+Punto crítico encontrado: 0
+Minimo encontrado: x = 0
