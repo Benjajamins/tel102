@@ -34,6 +34,9 @@ Falta implementar todo el gráfico y menú.
 
 
 
+
+
+
 Update 02/12/2024
 
 Desarrollé la ventana de gráficos:
