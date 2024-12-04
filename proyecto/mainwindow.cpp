@@ -1,5 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QDesktopServices>
+#include <QUrl>
+#include <QDir>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -28,9 +31,9 @@ bool esValido(const QString& input) {
 void MainWindow::showErrorMessage(const QString& errorMessage)
 {
     QMessageBox::warning(this,
-                          "Error", // Título de la ventana de mensaje
-                          errorMessage, // El mensaje que se muestra
-                          QMessageBox::Ok); // Botón que cierra el cuadro de mensaje
+                         "Error", // Título de la ventana de mensaje
+                         errorMessage, // El mensaje que se muestra
+                         QMessageBox::Ok); // Botón que cierra el cuadro de mensaje
 }
 
 void MainWindow::on_salir_clicked()
@@ -54,8 +57,6 @@ void MainWindow::on_lineEdit_textEdited(const QString &arg1)
 }
 
 
-
-
 void MainWindow::on_calcular_clicked()
 {
     if (textNow.empty()) {
@@ -69,3 +70,18 @@ void MainWindow::on_calcular_clicked()
     ventana->show();
 }
 
+void MainWindow::on_registro_clicked()
+{
+    // Ruta a la carpeta "registro"
+    QString folderPath = QDir::currentPath() + "/registro";
+
+    // Verificar si la carpeta existe
+    if (!QDir(folderPath).exists())
+    {
+        QMessageBox::warning(this, "Error", "La carpeta de registro no existe.");
+        return;
+    }
+
+    // Abrir la carpeta con el explorador de archivos predeterminado
+    QDesktopServices::openUrl(QUrl::fromLocalFile(folderPath));
+}

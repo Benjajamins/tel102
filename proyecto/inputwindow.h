@@ -33,6 +33,10 @@ private slots:
 
     void on_xmax_2_valueChanged(double arg1);
 
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_clicked();
+
 private:
     Ui::inputwindow *ui;
     Polinomio pol;

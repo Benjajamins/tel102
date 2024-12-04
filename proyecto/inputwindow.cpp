@@ -1,6 +1,10 @@
 #include "inputwindow.h"
 #include "ui_inputwindow.h"
 #include "polinomio.h"
+#include <QDir>
+#include <QMessageBox>
+#include <QPainter>
+#include <QFileDialog>
 using namespace SymEngine;
 
 inputwindow::inputwindow(std::string texto, bool maxMin, QWidget *parent)
@@ -29,53 +33,70 @@ void inputwindow::iniciarGrafico() {
 
     std::vector<std::string> puntos_criticos = polinomio.getPuntosCriticos();
 
+    // Mostrar los puntos críticos en el QLabel
     std::string clasificacion = "Puntos críticos:\n";
     for (const auto& punto : puntos_criticos) {
         clasificacion += punto + "\n";
     }
-    ui->labelClasificacion->setText(QString::fromStdString(clasificacion));
 
+    // Obtener máximos y mínimos
+    std::string maximos = "Máximos:\n";
+    std::vector<double> maximos_valores = polinomio.getMaximos();
+    for (double maximo : maximos_valores) {
+        maximos += "x = " + std::to_string(maximo) + ", f(x) = " + std::to_string(polinomio.evaluar(maximo)) + "\n";
+    }
+
+    std::string minimos = "Mínimos:\n";
+    std::vector<double> minimos_valores = polinomio.getMinimos();
+    for (double minimo : minimos_valores) {
+        minimos += "x = " + std::to_string(minimo) + ", f(x) = " + std::to_string(polinomio.evaluar(minimo)) + "\n";
+    }
+
+    // Mostrar en el QLabel los puntos críticos, máximos y mínimos
+    std::string resumen = clasificacion + "\n" + maximos + "\n" + minimos;
+    ui->labelClasificacion->setText(QString::fromStdString(resumen));
+
+    // Resto de la función permanece igual
     QLineSeries *series = new QLineSeries();
     double x_start = xmin;
     double x_end = xmax;
     double step = 0.1;
 
+    // Añadir puntos de la función al gráfico
     for (double x_val = x_start; x_val <= x_end; x_val += step) {
         double y_val = polinomio.evaluar(x_val);
         series->append(x_val, y_val);
     }
 
+    // Crear la serie para los puntos críticos
     QScatterSeries *puntosSeries = new QScatterSeries();
 
+    // Mostrar los puntos máximos o mínimos
     if (maxmin) {
-        qDebug() << "Buscando máximos...";
-        std::vector<double> maximos = polinomio.getMaximos();
-        for (double punto : maximos) {
+        for (double punto : maximos_valores) {
             double y = polinomio.evaluar(punto);
             puntosSeries->append(punto, y);
-            qDebug() << "[Gráfico] Máximo agregado: x =" << punto << ", y =" << y;
         }
         puntosSeries->setColor(Qt::red);
         puntosSeries->setName("Máximos");
     } else {
-        qDebug() << "Buscando mínimos...";
-        std::vector<double> minimos = polinomio.getMinimos();
-        for (double punto : minimos) {
+        for (double punto : minimos_valores) {
             double y = polinomio.evaluar(punto);
             puntosSeries->append(punto, y);
-            qDebug() << "[Gráfico] Mínimo agregado: x =" << punto << ", y =" << y;
         }
         puntosSeries->setColor(Qt::blue);
         puntosSeries->setName("Mínimos");
     }
 
-    puntosSeries->setMarkerSize(10);  
+    puntosSeries->setMarkerSize(10);  // Configurar el tamaño de los puntos
 
+    // Crear el gráfico
     QChart *chart = new QChart();
     chart->addSeries(series);
     chart->addSeries(puntosSeries);
     series->setName("Función");
 
+    // Configurar los ejes X e Y
     QValueAxis *axisX = new QValueAxis();
     axisX->setRange(x_start, x_end);
     axisX->setTitleText("x");
@@ -85,17 +106,19 @@ void inputwindow::iniciarGrafico() {
 
     QValueAxis *axisY = new QValueAxis();
     axisY->setRange(ymin, ymax);
-    std::string polinomioTexto=strPol;
-    axisY->setTitleText("f(x)= "+ QString::fromStdString(polinomioTexto));
+    std::string polinomioTexto = strPol;
+    axisY->setTitleText("f(x)= " + QString::fromStdString(polinomioTexto));
     chart->addAxis(axisY, Qt::AlignLeft);
     series->attachAxis(axisY);
     puntosSeries->attachAxis(axisY);
 
-    chart->setTitle("Gráfico del Polinomio: "+ QString::fromStdString(polinomioTexto));
+    chart->setTitle("Gráfico del Polinomio: " + QString::fromStdString(polinomioTexto));
 
+    // Crear vista y reemplazar el layout
     QChartView *chartView = new QChartView(chart);
     chartView->setRenderHint(QPainter::Antialiasing);
 
+    // Limpiar layout anterior antes de agregar el nuevo gráfico
     QVBoxLayout *layout = new QVBoxLayout();
     layout->addWidget(chartView);
 
@@ -110,6 +133,7 @@ void inputwindow::iniciarGrafico() {
 
     ui->graphicsView->setLayout(layout);
 }
+
 
 void inputwindow::actualizarGrafico(double x_min, double x_max) {
     Polinomio polinomio(strPol);
@@ -118,54 +142,71 @@ void inputwindow::actualizarGrafico(double x_min, double x_max) {
     polinomio.clasificarPuntosCriticos();
 
     std::vector<std::string> puntos_criticos = polinomio.getPuntosCriticos();
-    
+
+    // Mostrar los puntos críticos en el QLabel
     std::string clasificacion = "Puntos críticos:\n";
     for (const auto& punto : puntos_criticos) {
         clasificacion += punto + "\n";
     }
-    ui->labelClasificacion->setText(QString::fromStdString(clasificacion));
 
+    // Obtener máximos y mínimos
+    std::string maximos = "Máximos:\n";
+    std::vector<double> maximos_valores = polinomio.getMaximos();
+    for (double maximo : maximos_valores) {
+        maximos += "x = " + std::to_string(maximo) + ", f(x) = " + std::to_string(polinomio.evaluar(maximo)) + "\n";
+    }
+
+    std::string minimos = "Mínimos:\n";
+    std::vector<double> minimos_valores = polinomio.getMinimos();
+    for (double minimo : minimos_valores) {
+        minimos += "x = " + std::to_string(minimo) + ", f(x) = " + std::to_string(polinomio.evaluar(minimo)) + "\n";
+    }
+
+    // Mostrar en el QLabel los puntos críticos, máximos y mínimos
+    std::string resumen = clasificacion + "\n" + maximos + "\n" + minimos;
+    ui->labelClasificacion->setText(QString::fromStdString(resumen));
+
+    // Resto de la función permanece igual
     QLineSeries *series = new QLineSeries();
     double x_start = xmin;
     double x_end = xmax;
     double step = 0.1;
 
+    // Añadir puntos de la función al gráfico
     for (double x_val = x_start; x_val <= x_end; x_val += step) {
         double y_val = polinomio.evaluar(x_val);
         series->append(x_val, y_val);
     }
 
+    // Crear la serie para los puntos críticos
     QScatterSeries *puntosSeries = new QScatterSeries();
 
+    // Mostrar los puntos máximos o mínimos
     if (maxmin) {
-        qDebug() << "Buscando máximos...";
-        std::vector<double> maximos = polinomio.getMaximos();
-        for (double punto : maximos) {
+        for (double punto : maximos_valores) {
             double y = polinomio.evaluar(punto);
             puntosSeries->append(punto, y);
-            qDebug() << "[Gráfico] Máximo agregado: x =" << punto << ", y =" << y;
         }
         puntosSeries->setColor(Qt::red);
         puntosSeries->setName("Máximos");
     } else {
-        qDebug() << "Buscando mínimos...";
-        std::vector<double> minimos = polinomio.getMinimos();
-        for (double punto : minimos) {
+        for (double punto : minimos_valores) {
             double y = polinomio.evaluar(punto);
             puntosSeries->append(punto, y);
-            qDebug() << "[Gráfico] Mínimo agregado: x =" << punto << ", y =" << y;
         }
         puntosSeries->setColor(Qt::blue);
         puntosSeries->setName("Mínimos");
     }
 
-    puntosSeries->setMarkerSize(10);  
-    
+    puntosSeries->setMarkerSize(10);  // Configurar el tamaño de los puntos
+
+    // Crear el gráfico
     QChart *chart = new QChart();
     chart->addSeries(series);
     chart->addSeries(puntosSeries);
     series->setName("Función");
 
+    // Configurar los ejes X e Y
     QValueAxis *axisX = new QValueAxis();
     axisX->setRange(x_start, x_end);
     axisX->setTitleText("x");
@@ -175,17 +216,19 @@ void inputwindow::actualizarGrafico(double x_min, double x_max) {
 
     QValueAxis *axisY = new QValueAxis();
     axisY->setRange(ymin, ymax);
-    std::string polinomioTexto=strPol;
-    axisY->setTitleText("f(x)= "+ QString::fromStdString(polinomioTexto));
+    std::string polinomioTexto = strPol;
+    axisY->setTitleText("f(x)= " + QString::fromStdString(polinomioTexto));
     chart->addAxis(axisY, Qt::AlignLeft);
     series->attachAxis(axisY);
     puntosSeries->attachAxis(axisY);
 
-    chart->setTitle("Gráfico del Polinomio: "+ QString::fromStdString(polinomioTexto));
+    chart->setTitle("Gráfico del Polinomio: " + QString::fromStdString(polinomioTexto));
 
+    // Crear vista y reemplazar el layout
     QChartView *chartView = new QChartView(chart);
     chartView->setRenderHint(QPainter::Antialiasing);
 
+    // Limpiar layout anterior antes de agregar el nuevo gráfico
     QVBoxLayout *layout = new QVBoxLayout();
     layout->addWidget(chartView);
 
@@ -201,6 +244,7 @@ void inputwindow::actualizarGrafico(double x_min, double x_max) {
     ui->graphicsView->setLayout(layout);
 }
 
+// Cambios en las spinboxes
 void inputwindow::on_xmin_valueChanged(double arg1) {
     xmin = arg1;
     actualizarGrafico(arg1, xmax);
@@ -220,3 +264,57 @@ void inputwindow::on_xmax_2_valueChanged(double arg1) {
     ymax = arg1;
     actualizarGrafico(xmin, xmax);
 }
+
+void inputwindow::on_pushButton_2_clicked()
+{
+    this->close();
+}
+
+
+void inputwindow::on_pushButton_clicked()
+{
+    // Crear la carpeta "registro" si no existe
+    QDir dir("registro");
+    if (!dir.exists())
+    {
+        dir.mkpath("."); // Crea la carpeta si no existe
+    }
+
+    // Abrir un cuadro de diálogo para que el usuario elija el nombre del archivo
+    QString defaultFileName = dir.filePath("grafico.png");
+    QString filePath = QFileDialog::getSaveFileName(
+        this,
+        "Guardar gráfico como",
+        defaultFileName,
+        "Imágenes (*.png)");
+
+    // Si el usuario cancela, salimos del método
+    if (filePath.isEmpty())
+        return;
+
+    // Capturar el contenido del gráfico como imagen
+    QChartView *chartView = qobject_cast<QChartView *>(ui->graphicsView->layout()->itemAt(0)->widget());
+    if (!chartView)
+    {
+        QMessageBox::warning(this, "Error", "No se pudo encontrar el gráfico para guardar.");
+        return;
+    }
+
+    QPixmap pixmap(chartView->size());
+    QPainter painter(&pixmap);
+    chartView->render(&painter);
+
+    // Guardar la imagen como archivo PNG
+    if (pixmap.save(filePath))
+    {
+        QMessageBox::information(this, "Éxito", "Gráfico guardado en: " + filePath);
+    }
+    else
+    {
+        QMessageBox::warning(this, "Error", "No se pudo guardar el gráfico.");
+    }
+
+    // Cerrar la ventana después de guardar
+    this->close();
+}
+

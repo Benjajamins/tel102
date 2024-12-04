@@ -29,8 +29,9 @@ private slots:
 
     void on_lineEdit_textEdited(const QString &arg1);
 
-
     void on_calcular_clicked();
+
+    void on_registro_clicked();
 
 private:
     Ui::MainWindow *ui;
@@ -38,4 +39,4 @@ protected:
     bool maxmin;
     std::string textNow;
 };
-#endif
+#endif // MAINWINDOW_H

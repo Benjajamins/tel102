@@ -1,6 +1,5 @@
 #ifndef POLINOMIO_H
 #define POLINOMIO_H
-#include <iostream>
 #include <vector>
 #include <symengine/expression.h>
 #include <symengine/derivative.h>

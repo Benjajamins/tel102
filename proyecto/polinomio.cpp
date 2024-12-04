@@ -1,4 +1,4 @@
-#include "Polinomio.h"
+#include "polinomio.h"
 using namespace SymEngine;
 using namespace std;
 
@@ -153,3 +153,6 @@ void Polinomio::escribirLog(const QString &mensaje) {
         qDebug() << "Error al abrir el archivo para escritura.";
     }
 }
+
+
+
